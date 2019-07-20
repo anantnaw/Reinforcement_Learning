@@ -1,5 +1,5 @@
 
-# Navigation:
+# Navigation: Project Details
 
 In this project an agent uses deep reinforcement learning agent with the goal to navigate a virtual world while collecting yellow or purple bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Hence, the goal of the agent is to collect the maximum possible amount of yellow bananas while avoiding purple bananas.
 
