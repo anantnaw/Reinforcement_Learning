@@ -1,21 +1,30 @@
-# Reinforcement_Learning
-Reinforcement Learning projects
 
-# Title:
+# Navigation:
 
-One Paragraph of project description goes here
+In this project an agent uses deep reinforcement learning agent with the goal to navigate a virtual world while collecting yellow or purple bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Hence, the goal of the agent is to collect the maximum possible amount of yellow bananas while avoiding purple bananas.
 
-## Getting Started
+## Environment
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The state space consists of 37 dimensions consiting of the agent's velocity as well as a ray-based perception of the agent's forward direction. With this information the agent has to maximize its score by choosing one of the following actions in the optimal manner:
 
-### Prerequisites
+* `0` - move forward
+* `1` - move backward
+* `2` - turn left
+* `3` - turn right
+
+
+The task is episodic, and in order to know if the agent has "solved" the task, it must get an average score of +13 over 100 consecutive episodes.
+
+## Videos
+Here is an example of an untrained agent, which chooses one of the 4 actions randomly ( equiprobably) at each step.
+[![Random agent](https://img.youtube.com/vi/Du7vpSd0JeY/0.jpg)](https://youtu.be/Du7vpSd0JeY "Random Agent")
+
+## Prerequisites
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+1. Install Unity
+2. ML agents v0.4.0 ( you can install this with `pip install ml`
 
 ### Installing
 
