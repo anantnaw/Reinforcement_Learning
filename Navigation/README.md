@@ -12,14 +12,15 @@ The state space consists of 37 dimensions consiting of the agent's velocity as w
 * `2` - turn left
 * `3` - turn right
 
-
 The task is episodic, and in order to know if the agent has "solved" the task, it must get an average score of +13 over 100 consecutive episodes.
 
 ## Videos
-Here is an example of an untrained agent, which chooses one of the 4 actions randomly ( equiprobably) at each step. It manages an average score between -2 to 2.<br>
+Here is an example of an untrained agent, which chooses one of the 4 actions randomly ( equiprobably) at each step. It manages an average score between -2 to 2.
+
 [![Random agent](https://img.youtube.com/vi/Du7vpSd0JeY/0.jpg)](https://youtu.be/Du7vpSd0JeY "Random Agent")
-<br>
-Here is a video recording of the fully trained agent (which manages a score of 16.00).<br>
+
+Here is a video recording of the fully trained agent (which manages a score of 16-18.00).
+
 [![Trained agent](https://img.youtube.com/vi/tfKJGH8lEMY/0.jpg)](https://youtu.be/tfKJGH8lEMY "Trained Agent")
 
 
@@ -33,14 +34,14 @@ Several experiments were tried and the best-performing Deep Reinforcement Learni
 2. Install ml agents v 0.4.0 with (`pip3 install --upgrade mlagents==0.4.0`)
 3. (Optional) If there are issues with the installation of tensorflow while isntalling mlagents, install tensorflow with this command `pip3 install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.7.1-py3-none-any.whl)`
 4. Download the environment from one of the links below. You need only select the environment that matches your operating system:
-        Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-        Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-        Windows (32-bit): [click here]
-        Windows (64-bit): click here
+   * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+   * Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+   * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+   * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
 
-    (For Windows users) Check out this link if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+    (For Windows users) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
 
-    (For AWS) If you'd like to train the agent on AWS (and have not enabled a virtual screen), then please use this link to obtain the environment.
+    (For AWS) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip ) to obtain the environment.
 
 5. Place the file in root of the folder and unzip the file.
 
