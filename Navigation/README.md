@@ -47,7 +47,7 @@ Here is a video recording of the fully trained agent (which manages a score of 1
 
 To train the agent run  the cells in **Navigation_Train.ipynb notebook**. For testing a pretrained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of **Navigation_Inference.ipynb**.
 
-Description of the implementation is provided in **report.pdf**. For technical details see the code in the notebook.
+Description of the implementation is provided in **report.md**. For technical details see the code in the notebook.
 
 Model weights are stored in **dqn_model.pth**
 
