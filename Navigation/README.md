@@ -24,10 +24,6 @@ Here is a video recording of the fully trained agent (which manages a score of 1
 [![Trained agent](https://img.youtube.com/vi/tfKJGH8lEMY/0.jpg)](https://youtu.be/tfKJGH8lEMY "Trained Agent")
 
 
-## Techniques used for training
-
-Several experiments were tried and the best-performing Deep Reinforcement Learning agent was the one trained with Deep Q Learning with fixed targets, double DQN, dueling DQN, and experience replay. More details can be found in the report.md file.
-
 ## Getting Started
 
 1. Install [Unity](https://unity3d.com/get-unity/download)
