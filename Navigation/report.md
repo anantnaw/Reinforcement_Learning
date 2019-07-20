@@ -1,4 +1,4 @@
-# Solving Banana Collectors Environment with Deep Q-Network
+# Training agent for  Banana Collectors Environment with Deep RL
 
 ## Overview
 
@@ -74,7 +74,7 @@ Video of the solution demo:
 
 ## Future work
 
-1.Integrating further research work such as Prioritized Replay, distributional DQN, Noisy DQN, rainbow DQN
+1. Integrating further research work such as Prioritized Replay, distributional DQN, Noisy DQN, rainbow DQN
 2. Trying training out on raw pixels.
 3. Systematic Hyperperamater tuning using grid/random/bayesian approaches
 4. Integrating transfer learning when learning on raw pixels.
