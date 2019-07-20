@@ -16,86 +16,50 @@ The state space consists of 37 dimensions consiting of the agent's velocity as w
 The task is episodic, and in order to know if the agent has "solved" the task, it must get an average score of +13 over 100 consecutive episodes.
 
 ## Videos
-Here is an example of an untrained agent, which chooses one of the 4 actions randomly ( equiprobably) at each step.
+Here is an example of an untrained agent, which chooses one of the 4 actions randomly ( equiprobably) at each step. It manages an average score between -2 to 2.<br>
 [![Random agent](https://img.youtube.com/vi/Du7vpSd0JeY/0.jpg)](https://youtu.be/Du7vpSd0JeY "Random Agent")
+<br>
+Here is a video recording of the fully trained agent (which manages a score of 16.00).<br>
+[![Trained agent](https://img.youtube.com/vi/tfKJGH8lEMY/0.jpg)](https://youtu.be/tfKJGH8lEMY "Trained Agent")
 
-## Prerequisites
 
-What things you need to install the software and how to install them
+## Techniques used for training
 
-1. Install Unity
-2. ML agents v0.4.0 ( you can install this with `pip install ml`
+Several experiments were tried and the best-performing Deep Reinforcement Learning agent was the one trained with Deep Q Learning with fixed targets, double DQN, dueling DQN, and experience replay. More details can be found in the report.md file.
 
-### Installing
+## Getting Started
 
-A step by step series of examples that tell you how to get a development env running
+1. Install [Unity](https://unity3d.com/get-unity/download)
+2. Install ml agents v 0.4.0 with (`pip3 install --upgrade mlagents==0.4.0`)
+3. (Optional) If there are issues with the installation of tensorflow while isntalling mlagents, install tensorflow with this command `pip3 install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.7.1-py3-none-any.whl)`
+4. Download the environment from one of the links below. You need only select the environment that matches your operating system:
+        Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+        Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+        Windows (32-bit): [click here]
+        Windows (64-bit): click here
 
-Say what the step will be
+    (For Windows users) Check out this link if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
 
-```
-Give the example
-```
+    (For AWS) If you'd like to train the agent on AWS (and have not enabled a virtual screen), then please use this link to obtain the environment.
 
-And repeat
+5. Place the file in root of the folder and unzip the file.
 
-```
-until finished
-```
+6. Run the cells in Navigation_Train.ipynb to test the environment and train the agent. For testing the trained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of Navigation_Inference.ipynb.
 
-End with an example of getting some data out of the system or using it for a little demo
+### Instructions
 
-## Running the tests
+To train the agent run  the cells in **Navigation_Train.ipynb notebook**. For testing a pretrained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of **Navigation_Inference.ipynb**.
 
-Explain how to run the automated tests for this system
+Description of the implementation is provided in **report.pdf**. For technical details see the code in the notebook.
 
-### Break down into end to end tests
+Model weights are stored in **dqn_model.pth**
 
-Explain what these tests test and why
 
-```
-Give an example
-```
 
-### And coding style tests
 
-Explain what these tests test and why
 
-```
-Give an example
-```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
 
