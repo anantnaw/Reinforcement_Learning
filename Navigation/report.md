@@ -2,7 +2,7 @@
 
 ## Overview
 
-This report summarizes the technical implementation of my solution to the Navigation Project ( for the banana collector environment) from Udacity Deep Reinforcement Learning Nanodegree.
+This report summarizes the technical implementation of my solution to the Navigation Project ( for the banana collector environment) implemented using deep reinforcement learning.
 
 My approach had two iterations, in which each subequent approach enhances the previous one as follows:
 
