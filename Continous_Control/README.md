@@ -11,13 +11,15 @@ The observation space consists of 33 variables corresponding to position, rotati
 The task is episodic, and in order to know if the agent has "solved" the task, it must get an average score of +30 over 100 consecutive episodes.
 
 ## Videos
-Here is an example of an untrained agent, samples from a normal distribution between -1 to 1. It manages an average score of 0.
+Here is an example of an untrained agent, samples from a uniform random  distribution between -1 to 1. It manages an average score of 0.
 
-[![Random agent](https://www.youtube.com/watch?v=aVyJsIQ_Qbk "Random Agent")
+[![Random agent]( "Random Agent")
+[![Random agent](https://youtu.be/aVyJsIQ_Qbk/0.jpg)](https://youtu.be/aVyJsIQ_Qbk"Random Agent")
 
 Here is a video recording of the fully trained agent (which manages a score of 30-50).
 
-[![Trained agent](https://www.youtube.com/watch?v=sWK1l8EXcEs "Trained Agent")
+[![Trained Agent](https://youtu.be/sWK1l8EXcEs/0.jpg)](https://youtu.be/sWK1l8EXcEs "Random Agent")
+
 
 
 ## Getting Started
