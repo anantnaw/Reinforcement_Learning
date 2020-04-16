@@ -13,7 +13,7 @@ The task is episodic, and in order to know if the agent has "solved" the task, i
 ## Videos
 Here is an example of an untrained agent, samples from a uniform random  distribution between -1 to 1. It manages an average score of 0.
 
-
+[![Random agent](https://img.youtube.com/vi/Du7vpSd0JeY/0.jpg)](https://youtu.be/Du7vpSd0JeY "Random Agent")
 
 [![Random Agent](https://img.youtube.com/vi/aVyJsIQ_Qbk/0.jpg)](https://youtu.be/aVyJsIQ_Qbk "Random Agent")
 
