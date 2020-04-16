@@ -20,6 +20,7 @@ Here is an example of an untrained agent, samples from a uniform random  distrib
 Here is a video recording of the fully trained agent (which manages a score of 30-50).
 
 [![Trained Agent](https://youtu.be/sWK1l8EXcEs/0.jpg)](https://youtu.be/sWK1l8EXcEs "Trained Agent")
+[![Trained Agent](https://img.youtube.com/vi/sWK1l8EXcEs/0.jpg)](https://youtu.be/sWK1l8EXcEs "Trained Agent")
 
 
 
