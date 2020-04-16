@@ -42,7 +42,7 @@ Here is a video recording of the fully trained agent (which manages a score of 3
 
 ### Instructions
 
-To train the agent run  the cells in ** Continous_Control_Train.ipynb notebook**. For testing a pretrained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of ** Continous_Control_Train.ipynb_Inference.ipynb**.
+To train the agent run  the cells in **Continous_Control_Train.ipynb notebook**. For testing a pretrained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of **Continous_Control_Train.ipynb_Inference.ipynb**.
 
 Description of the implementation is provided in **report.md**. For technical details see the code in the notebook.
 
