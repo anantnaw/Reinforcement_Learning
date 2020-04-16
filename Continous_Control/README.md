@@ -16,7 +16,7 @@ Here is an example of an untrained agent, samples from a uniform random  distrib
 
 [![Random Agent](https://img.youtube.com/vi/aVyJsIQ_Qbk/0.jpg)](https://youtu.be/aVyJsIQ_Qbk "Random Agent")
 
-Here is a video recording of the fully trained agent (which manages a score of 30-50).
+Here is a video recording of the fully trained agent (which manages a score of 30-40).
 
 [![Trained Agent](https://img.youtube.com/vi/sWK1l8EXcEs/0.jpg)](https://youtu.be/sWK1l8EXcEs "Trained Agent")
 
@@ -27,7 +27,7 @@ Here is a video recording of the fully trained agent (which manages a score of 3
 1. Install [Unity](https://unity3d.com/get-unity/download)
 2. Install ml agents v 0.4.0 with (`pip3 install --upgrade mlagents==0.4.0`)
 3. (Optional) If there are issues with the installation of tensorflow while installing mlagents, install tensorflow with this command `pip3 install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.7.1-py3-none-any.whl)`
-4. Download the environment from one of the links below. You need only select the environment that matches your operating system:
+4. Download the single agent environment from one of the links below. You need only select the environment that matches your operating system:
    * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
    * Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
    * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
