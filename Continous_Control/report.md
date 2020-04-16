@@ -5,10 +5,9 @@
 This report summarizes the technical implementation of my solution to the Continuous Control Project( for the Reacher environment) implemented using deep reinforcement learning.
 
 My approach consisted of solving the Single Agent version of the environment, and experimenting significantly with the Model and training  architecture and parameters
-The agent uses a single threaded implementation of an actor critic approach called Deep Deterministic Policy Gradient, combined with Experience Replay and Double DQN. It is based on the following papers:
+The agent uses a single threaded implementation of an actor critic approach called Deep Deterministic Policy Gradient, combined with fixed Q targets and  Experience Replay. It is based on the following ( and related) papers:
 
 - **DDPG **: Timothy P. Lillicrap, et al. "Continuous Control control with deep reinforcement learning."
-- **Double DQN**: Van Hasselt, et al. "Deep Reinforcement Learning with Double Q-Learning." .
 
 PyTorch, Python and Unity ML Agents environments are used for the implementation, and the documented code is served via Jupyter notebooks in Continous_Control_Train.ipynb and Continous_Control_Train_Inference.ipynb ( for training and inference respectively).
 
@@ -18,9 +17,9 @@ Since the final iteration of the  implementation yielded the best results due to
 
 The main part of the solution : DDPG agent. is stored in the `ddpg_agent` class/file.  the models for both actor and critic are stored in the "model" class/file.
 This agent uses experience replay, with the replay memory stored in the `ReplayBuffer` class, which is stored in the same python file as the agent.
-It also uses DDPG actor critic approach, together with the concepts of fixed Q-targets and Double DQNs. Fixed Q-targets help de-couple the parameters of the network used to predict the correct value, and the network which is being updated, thus reducing harmful co-relation. Double DQN reduce the noisy and bias in the beginning of the training process and thus lead to faster and more stable training. Double networks and fixed Q targets require two networks with the same structure:  : an online local network for choosing actions and a target Q-network for learning the optimal policy. Both the Actor and Critic networks both have two networks, the target and local variants.
+It also uses DDPG actor critic approach, together with the concepts of fixed Q-targets and Double networks. Fixed Q-targets help de-couple the parameters of the network used to predict the correct value, and the network which is being updated, thus reducing harmful co-relation. Double networks and fixed Q targets require two networks with the same structure:  : an online local network for choosing actions and a target Q-network for learning the optimal policy. Both the Actor and Critic networks both have two networks, the target and online local variants.
 
-## Deep Q-network architecture
+## DDPG actor critic architecture
 
 The Actor  takes a state as input and maps it to the optimal action to be taken in that state A, while the critic takes both the state and action taken and evaluates its goodness with a Q value  Q(S,A).
 
@@ -43,13 +42,13 @@ Actor:
 Critic:
 
 - Inputs:
-	-33 nodes (state size)
+	- 33 nodes (state size)
 	- 4 nodes (dimensions of action size taken by actor)
 - Hidden layer 1 ( applied to embed state input): 256 nodes
 	 - Rectified linear unit activation 
-	 -1D batch Normlization
+	 - 1D batch Normalisation
 - Hidden layer 2( applied to concatenation of  state embedding and action) : 256
-	- Rectified linear unit activation
+	-  Rectified linear unit activation
 - Output layer: 1 node with no activation (to measure Q value)
 
 
