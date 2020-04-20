@@ -34,13 +34,12 @@ class MADDPG():
         self.memory = ReplayBuffer(BUFFER_SIZE, BATCH_SIZE, random_seed)
         self.step_count = 0
         
-    # reset noise
+    
     def reset(self):
         for agent in self.agents:
             agent.reset()
             
-    # state: state array for all agents [agent_no, state_size]
-    # output: actions of all agents [agent_no, action of an agent]
+    
     def act(self, state, i_episode=0, add_noise=True, train=True):
         actions = []
         for agent_state, agent in zip(state, self.agents):
@@ -53,7 +52,6 @@ class MADDPG():
     
   
         
-    # store states, actions, etc into ReplayBuffer and trigger training regularly
  
     def step(self, i_episode, state, action, reward, next_state, done):
         full_state = np.reshape(state, newshape=(-1))

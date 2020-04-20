@@ -10,17 +10,16 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 
-TAU = 1e-3              # for soft update of target parameters
+TAU = 1e-3              
 
 NOISE_DECAY= 0.995
-#EPISODES_BEFORE_TRAINING = 500
-#NOISE_MAX=1.0
+
 NOISE_MIN=0.1
 GAMMA=0.99
 
-LR_ACTOR = 1e-4         # learning rate of the actor 
-LR_CRITIC = 3e-4        # learning rate of the critic
-WEIGHT_DECAY = 0        # L2 weight decay
+LR_ACTOR = 1e-4         
+LR_CRITIC = 3e-4        
+WEIGHT_DECAY = 0        
 
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -41,20 +40,18 @@ class Agent():
         self.action_size = action_size
         self.seed = random.seed(random_seed)
 
-        # Actor Network (w/ Target Network)
+        # init local and target actor Networks
         self.actor_local = Actor(state_size, action_size, random_seed).to(device)
         self.actor_target = Actor(state_size, action_size, random_seed).to(device)
         self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=LR_actor)
 
-        # Critic Network (w/ Target Network)
+        # init local and target critic Networks
         self.critic_local = Critic(state_size*num_agents, action_size*num_agents, random_seed).to(device)
         self.critic_target = Critic(state_size*num_agents, action_size*num_agents, random_seed).to(device)
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_critic, weight_decay=weight_decay)
     
-        #self.soft_update(self.critic_local, self.critic_target, 1)
-        #self.soft_update(self.actor_local, self.actor_target, 1)    
         
-        # Noise process
+        # init params of noise process
         self.noise = OUNoise(action_size, random_seed, mu=OU_mu, theta=OU_theta, sigma=OU_sigma)
         self.noise_decay = noise_decay
         self.noise_min = noise_min
@@ -62,26 +59,20 @@ class Agent():
         self.step_count = 0
 
     def act(self, state, i_episode, add_noise=True):
-        """Returns actions for given state as per current policy."""
+        """Uses policy to map states to action"""
         state = torch.from_numpy(state).float().to(device)
         self.actor_local.eval()
         with torch.no_grad():
             action = self.actor_local(state).cpu().data.numpy()
         self.actor_local.train()
         
-        if add_noise:
-            #if i_episode > EPISODES_BEFORE_TRAINING and self.noise_reduction_ratio > NOISE_END:
-                #self.noise_reduction_ratio > NOISE_END:
-                #self.noise_reduction_ratio = NOISE_REDUCTION_RATE**(i_episode-EPISODES_BEFORE_TRAINING)
-#             noise_reduction_ratio = 1
-            #action += self.noise_reduction_ratio * self.add_noise()
-            
+        if add_noise:     
             action += max(self.noise_decay, self.noise_min )*self.noise.sample()
             self.noise_decay*=self.noise_decay
         return np.clip(action, -1, 1)
 
     def act_inference(self, state):
-        """Returns actions for given state as per current policy."""
+        """Uses policy to map states to action( no grad accumulation and no noise)"""
         state = torch.from_numpy(state).float().to(device)
         self.actor_local.eval()
         with torch.no_grad():
@@ -93,16 +84,7 @@ class Agent():
         self.noise.reset()
 
     def learn(self, experiences, gamma):
-        """Update policy and value parameters using given batch of experience tuples.
-        Q_targets = r + γ * critic_target(next_state, actor_target(next_state))
-        where:
-            actor_target(state) -> action
-            critic_target(state, action) -> Q-value
-        Params
-        ======
-            experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples 
-            gamma (float): discount factor
-        """
+      
         full_states, actions, actor_local_actions, actor_target_actions, agent_state, agent_action, agent_reward, agent_done, next_states, next_full_states = experiences
 
         # ---------------------------- update critic ---------------------------- #
@@ -170,6 +152,6 @@ class OUNoise:
         """Update internal state and return it as a noise sample."""
         x = self.state
         dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
-        #dx = self.theta * (self.mu - x) + self.sigma * np.random.standard_normal(self.size)
+      
         self.state = x + dx
         return self.state
