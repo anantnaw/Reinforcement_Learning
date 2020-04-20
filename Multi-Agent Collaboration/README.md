@@ -42,11 +42,11 @@ Here is a video recording of the fully trained agent (where each agent managed a
 
 ### Instructions
 
-To train the agent run  the cells in *MA_Collaboration-training.ipynb notebook**. For testing a pretrained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of **MA_Collaboration-inference.ipynb**.
+To train the agent run  the cells in **MA_Collaboration-training.ipynb notebook**. For testing a pretrained agent, ensure that the model_weights are in the same folder as the notebook, then run the cells of **MA_Collaboration-inference.ipynb**.
 
 Description of the implementation is provided in **report.md**. For technical details see the code in the notebook.
 
-Model weights for the actor 1 and are stored in  **checkpoint_agent0_actor.pth** and **checkpoint_agent1_actor.pth** respectively
+Pretrained model weights for the local actors for both the agents ( used during inferencing)  and are stored in  **checkpoint_agent0_actor.pth** and **checkpoint_agent1_actor.pth** respectively.
 
 
 
