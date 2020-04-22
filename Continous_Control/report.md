@@ -7,7 +7,7 @@ This report summarizes the technical implementation of my solution to the Contin
 My approach consisted of solving the Single Agent version of the environment, and experimenting significantly with the Model and training  architecture and parameters
 The agent uses a single threaded implementation of an actor critic approach called Deep Deterministic Policy Gradient, combined with fixed Q targets and  Experience Replay. It is based on the following ( and related) papers:
 
-- **DDPG **: Timothy P. Lillicrap, et al. "Continuous Control control with deep reinforcement learning."
+- **DDPG**: Timothy P. Lillicrap, et al. "Continuous Control control with deep reinforcement learning."
 
 PyTorch, Python and Unity ML Agents environments are used for the implementation, and the documented code is served via Jupyter notebooks in Continous_Control_Train.ipynb and Continous_Control_Train_Inference.ipynb ( for training and inference respectively).
 

@@ -7,7 +7,7 @@ This report summarizes the technical implementation of my solution to the Multi 
 My approach consisted of solving the single threaded version of the environment, and experimenting significantly with the Model and training  architecture and parameters
 The environment consists of two agents, each with their own actor and critic, collaboratively solving the environment, using Multi Agent Deep Deterministic Policy Gradient (MADDPG) combined with fixed Q targets and  Experience Replay. It is based on the following ( and related) papers:
 
-- **MADDPG **:  "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments" by Ryan Lowe, et al.
+- **MADDPG**:  "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments" by Ryan Lowe, et al.
 PyTorch, Python and Unity ML Agents environments are used for the implementation, and the documented code is served via Jupyter notebooks in MA_Collaboration-training.ipynb,  and MA_Collaboration-inference.ipynb ( for training and inference respectively).
 
 Since the final iteration of the implementation yielded the best results due to its speed in solving the environment( >0.5 score across the maximum score of the two agents per episode in averaged across last 100 episodes) and a better training performance, and hence this is the approach will be covered in this report.
